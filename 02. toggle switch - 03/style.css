@@ -1,0 +1,106 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: sans-serif;
+}
+body[data-theme="light"]{
+    --color-1 : rgb(255, 255, 100);
+    --color-2 : white;
+    --color-3 : rgb(255, 102, 0);
+    --color-4 : rgb(255, 196, 0);
+    --color-5 :white;
+
+    --color-6 : #dbdbdb;
+}
+body[data-theme="dark"]{
+    --color-1 : black;
+    --color-2 : rgba(255, 255, 255, 0.5);
+    --color-3 : rgb(0, 0, 255);
+    --color-4 : rgba(255, 255, 255, 0.63);
+    --color-5 : purple;
+    
+    --color-6 : gray;
+}
+
+/* this is a card  */
+
+section{
+    display: flex;
+    height: 100vh;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+
+}
+.container{
+    background-color: var(--color-1);
+    padding: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: start;
+    color: var(--color-4);
+}
+h1{}
+p{}
+button{
+    padding: 0.5rem;
+    border: none;
+    color: var(--color-2);
+    background-color: var(--color-3);
+    border-radius: .2rem;
+    text-transform: uppercase;
+}
+
+/* this is a toggle button  */
+
+.switcher{
+    background-color: none;
+    width: 160px;
+    height: 60px;
+    display: block;
+    border: 2px solid var(--color-4);
+    position: relative;
+    border-radius: 2rem;
+    cursor: pointer;
+    float: right;
+    margin: 2rem;
+    transition: .5s ease;
+
+}
+input{
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    display:none;
+}
+.slider{
+    height: 42px;
+    width: 42px;
+    background-color: var(--color-1);
+    display: block;
+    margin: 8px;
+    border-radius: 50%;
+    transition: .5s ease;
+}
+input:checked + .slider{
+    transform: translateX(98px);
+    /* background-color: var(--color-1); */
+}
+/* 아래건 먹히지 않음... */
+
+/* 
+.dark-mode{
+      background-color: black;
+  } */
+
+body{
+    background-color: var(--color-6);
+    transition: .3s ease;
+
+
+}
